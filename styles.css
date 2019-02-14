@@ -1,0 +1,23 @@
+.calc {
+	text-align: center;
+	background-image: linear-gradient(#43c6ac, #f8ffae);
+	height: 100%;
+}
+
+.font-p {
+	font-size: 20px;
+    font-weight: 700;
+    font-family: arial,sans-serif;
+}
+
+input {
+	overflow: visible;
+    border-radius: 8px;
+    border: 2px solid black;
+    width: 40%;
+}
+.btn-success {
+	position: relative;
+	top: 30px;
+}
+
