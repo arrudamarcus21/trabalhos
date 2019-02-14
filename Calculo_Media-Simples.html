@@ -1,0 +1,68 @@
+<!-- <html>
+    <head>
+
+    <script>
+
+        function soma(){
+            var n1 = document.getElementById("n1");
+            var n2 = document.getElementById("n2");
+            var n3 = parseInt(n1.value) * parseInt(n2.value);
+            alert(n3);
+        }
+
+    </script>
+    </head>
+    <body>
+    <label>Número 1: </label>
+    <input type="Number" id="n1">
+
+    <label>Número 2: </label>
+    <input type="Number" id="n2">
+
+    <input type="button" onclick="soma()" value="Soma">
+
+
+
+    </body>
+</html> -->
+
+<html>
+    <head>
+    <script>
+        function calcMedia(){
+            var n1 = document.getElementById("n1");
+            var n2 = document.getElementById("n2");
+            var n3 = document.getElementById("n3");
+
+            var res = (parseInt(n1.value) + parseInt(n2.value) + parseInt(n3.value))/3
+       
+            
+            if(n1.value == "" && n2.value == "" && n3.value == ""){
+                alert('digite um numero');
+            }else if(n1.value == "" || n2.value == "" || n3.value == ""){
+                alert('preecha todos os campos');
+            }else{
+                alert(res);
+            }
+        }
+    </script>        
+    </head>
+    <body>
+        <label>nota 1: </label>
+        <input type="number" id="n1" value="">
+
+        <br>
+
+        <label>nota 2: </label>
+        <input type="number" id="n2" value="">
+
+        <br>
+
+        <label>nota 3: </label>
+        <input type="number" id="n3" value="">
+
+        <br>
+
+        <input type="button" value="Media" onclick="calcMedia()">
+    </body>
+</html>
