@@ -6,6 +6,16 @@
 
 
     <script>
+        function SomenteNumero(e){
+            var tecla=(window.event)?event.keyCode:e.which;   
+            if((tecla>47 && tecla<58))
+                return true;
+            else{
+                if (tecla==8 || tecla==0) return true;
+                   else  return false;
+                }
+            }
+
         function calcMedia(){
             var n1 = document.getElementById("n1");
             var n2 = document.getElementById("n2");
@@ -18,7 +28,9 @@
                 alert('digite um numero');
             }else if(n1.value == "" || n2.value == "" || n3.value == ""){
                 alert('preecha todos os campos');
-            }else{
+            }else if(n1.value > 10 || n2.value > 10 || n3.value > 10){
+                alert('digite um valor abaixo de 10');
+            }else {
                 alert(res);
             }
         }
@@ -31,14 +43,16 @@
                 
                 </div>
                 <div class="col-md-6 calc">
+                    <h2>Calculo de Média</h2>
+
                     <p class="font-p">nota 1: </p>
-                    <input type="number" id="n1" value="">
+                    <input type="text" onkeypress='return SomenteNumero(event)' placeholder="nota 1" id="n1" value="">
                     
                     <p class="font-p">nota 2: </p>
-                    <input type="number" id="n2" value="">
+                    <input type="text" onkeypress='return SomenteNumero(event)' placeholder="nota 2"  id="n2" value="">
 
                     <p class="font-p">nota 3: </p>
-                    <input type="number" id="n3" value="">
+                    <input type="text" onkeypress='return SomenteNumero(event)' placeholder="nota 3"  id="n3" value="">
                     
                     <br>
 
