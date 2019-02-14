@@ -38,9 +38,9 @@
        
             
             if(n1.value == "" && n2.value == "" && n3.value == ""){
-                alert('digite um numero');
-            }else if(n1.value == "" || n2.value == "" || n3.value == ""){
                 alert('preecha todos os campos');
+            }else if(n1.value == "" || n2.value == "" || n3.value == ""){
+                alert('Um ou mais campos estão vazio');
             }else{
                 alert(res);
             }
@@ -48,18 +48,19 @@
     </script>        
     </head>
     <body>
+        <h2>Cálculo de Média</h2>
         <label>nota 1: </label>
-        <input type="number" id="n1" value="">
+        <input type="number" min="0" max="10" id="n1" value="">
 
         <br>
 
         <label>nota 2: </label>
-        <input type="number" id="n2" value="">
+        <input type="number" min="0" max="10" id="n2" value="">
 
         <br>
 
         <label>nota 3: </label>
-        <input type="number" id="n3" value="">
+        <input type="number" min="0" max="10" id="n3" value="">
 
         <br>
 
